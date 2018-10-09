@@ -62,7 +62,6 @@ $(function() {
     });
   }
 
-
   function createTweetElement(tweetData) {
     //Save required data from tweetData
     const name = tweetData.user.name;
