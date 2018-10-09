@@ -68,7 +68,8 @@ $(function() {
     const avatar = tweetData.user.avatars.small;
     const handle = tweetData.user.handle;
     const text = tweetData.content.text;
-    const date = tweetData.created_at;
+    const created = new Date(tweetData.created_at);
+    const date = created.toString();
 
     //Create Tweet element using jQuery
     const $tweet = $("<article>").addClass("tweet");
