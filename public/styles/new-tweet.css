@@ -10,7 +10,7 @@
   display: none;
 }
 
-.container .new-tweet h2 {
+.new-tweet h2 {
   box-sizing: inherit;
   margin-top: 0;
 }
@@ -37,4 +37,5 @@ h2:after {
 .error {
   display: none;
   color: red;
+  margin: 0px;
 }
