@@ -38,3 +38,22 @@ function renderTweet(tweet) {
   // takes return value and appends it to the tweets container
   $('#tweets-container').prepend($tweet);
 }
+
+function newTweet() {
+  //Validate tweet length
+   let text = ($("#text").val());
+   if (text === "") {
+      alert("Please enter your tweet!");
+  } else if (text.length > 140) {
+    alert("Tweet is too long!");
+  } else {
+      let str = $("#target").serialize();
+      $.post("/tweets", str, function(data){
+        $("#target").trigger("reset");
+        $(".counter").text(140);
+        $.get("/tweets", function(data){
+          let tweet = renderTweet(data[0]);
+        });
+      });
+    }
+  }
