@@ -34,6 +34,11 @@
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
       <button id="compose">Compose</button>
+      <script>
+        $("#compose").click(function(){
+        $(".new-tweet").slideToggle();
+        });
+      </script>
     </nav>
 
     <!-- Page-specific (main) content here -->
