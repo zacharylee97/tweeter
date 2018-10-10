@@ -38,9 +38,18 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-          <textarea id="text" placeholder="What are you humming about?"></textarea>
+        <form id="target" method="POST" action="/tweets">
+          <textarea name="text" id="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
+          <script>
+            $("#target").submit(function(event) {
+            event.preventDefault();
+            let str = $("#target").serialize();
+            $.post("/tweets", str, function(){
+              console.log("Tweet posted!");
+            });
+          });
+          </script>
           <span class="counter">140</span>
           <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
         </form>
