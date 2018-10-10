@@ -44,10 +44,18 @@
           <script>
             $("#target").submit(function(event) {
             event.preventDefault();
-            let str = $("#target").serialize();
-            $.post("/tweets", str, function(){
-              console.log("Tweet posted!");
-            });
+            //Validate tweet length
+             let text = ($("#text").val());
+             if (text === "") {
+                alert("Please enter your tweet!");
+            } else if (text.length > 140) {
+              alert("Tweet is too long!");
+            } else {
+                let str = $("#target").serialize();
+                $.post("/tweets", str, function(){
+                console.log("Tweet posted!");
+              });
+            }
           });
           </script>
           <span class="counter">140</span>
