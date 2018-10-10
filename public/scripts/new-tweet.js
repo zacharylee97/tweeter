@@ -43,10 +43,11 @@ function newTweet() {
   //Validate tweet length
   let text = ($("#text").val());
   if (text === "") {
-    alert("Please enter your tweet!");
+    $(".error").text("Please enter your tweet!").slideDown();
   } else if (text.length > 140) {
-    alert("Tweet is too long!");
+    $(".error").text("Tweet is too long!").slideDown();
   } else {
+    $(".error").slideUp();
     let str = $("#target").serialize();
     $.post("/tweets", str, function(data){
       $("#target").trigger("reset");
