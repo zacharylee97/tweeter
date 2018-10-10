@@ -53,7 +53,7 @@ function newTweet() {
       $("#target").trigger("reset");
       $(".counter").text(140);
       $.get("/tweets", function(data){
-        let tweet = renderTweet(data[0]);
+        let tweet = renderTweet(data[data.length - 1]);
       });
     });
   }
