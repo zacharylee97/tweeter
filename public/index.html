@@ -35,9 +35,12 @@
       <span class="header">Tweeter</span>
       <button id="compose">Compose</button>
       <script>
-        $("#compose").click(function(){
-        $(".new-tweet").slideToggle();
-        $("#text").focus();
+          $("#compose").click(function(){
+          $("#target").trigger("reset");
+          $(".counter").text(140).css("color", "black");
+          $(".error").css("display", "none");
+          $(".new-tweet").slideToggle();
+          $("#text").focus();
         });
       </script>
     </nav>
