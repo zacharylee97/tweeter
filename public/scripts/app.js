@@ -5,25 +5,6 @@
  */
 $(function() {
 
-  function loadTweets() {
-    $.get("/tweets", function(data){
-      renderTweets(data);
-    });
-  }
-
-  loadTweets();
-
-  function renderTweets(tweets) {
-    // loops through tweets
-    tweets.forEach(function(element){
-      // calls createTweetElement for each tweet
-      var $tweet = createTweetElement(element);
-
-      // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
-    });
-  }
-
   function createTweetElement(tweetData) {
     //Save required data from tweetData
     const name = tweetData.user.name;
@@ -57,4 +38,22 @@ $(function() {
 
     return $tweet;
   }
+
+  function renderTweets(tweets) {
+    // loops through tweets
+    tweets.forEach(function(element){
+      // calls createTweetElement for each tweet
+      var $tweet = createTweetElement(element);
+      // takes return value and appends it to the tweets container
+      $('#tweets-container').append($tweet);
+    });
+  }
+
+  function loadTweets() {
+    $.get("/tweets", function(data){
+      renderTweets(data);
+    });
+  }
+
+  loadTweets();
 });
