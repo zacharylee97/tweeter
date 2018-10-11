@@ -1,14 +1,21 @@
+$green: #00a087;
+$gray: #eee;
+$text-color: #107879;
+$gray-border: 1px solid #afaeae;
+$black-border: 0.5px solid black;
+$faded: opacity(50%);
+$solid: opacity(100%);
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
-  color: #00a087;
-  background-color: #eee;
+  color: $green;
+  background-color: $gray;
   font-family: "Roboto Condensed", serif;
 }
 
@@ -17,7 +24,7 @@ body {
   padding-top: 100px;
   width: 450px;
   background-color: white;
-}
+ }
 
 /*Header*/
 #nav-bar {
@@ -25,11 +32,11 @@ body {
   z-index: 500;
   top: 0;
   width: 100%;
-  background-color: #00a087;
+  background-color: $green;
   padding: 0 2em;
 }
 
-.logo {
+.logo{
   height: 80px;
   width: 80px;
   float: left;
@@ -49,7 +56,7 @@ body {
   margin-top: 13px;
   border-radius: 5%;
   border-color: black;
-  color: #00a087;
+  color: $green;
   filter: opacity(75%);
 }
 
@@ -59,11 +66,12 @@ body {
 }
 
 /*Compose Tweet*/
-.new-tweet {
-  background-color: #eee;
+
+ .new-tweet {
+  background-color: $gray;
   margin-left: 2em;
   margin-right: 2em;
-  border: 1px solid #afaeae;
+  border: $gray-border;
   border-radius: 2%;
   padding: 1ex;
   display: none;
@@ -75,9 +83,9 @@ body {
 }
 
 h2:after {
-  content: " ";
+  content: ' ';
   display: block;
-  border: 0.5px solid black;
+  border: $black-border;
 }
 
 .new-tweet form {
@@ -100,6 +108,7 @@ h2:after {
   margin: 0px;
 }
 
+
 /*Tweets*/
 #tweets-container {
   margin-top: 10px;
@@ -110,12 +119,12 @@ h2:after {
   margin-left: 2em;
   margin-right: 2em;
   margin-bottom: 10px;
-  border: 1px solid #afaeae;
+  border: $gray-border;
   border-radius: 2%;
 }
 
 .tweetHeader {
-  background-color: #eee;
+  background-color: $gray;
   padding-bottom: 70px;
 }
 
@@ -123,7 +132,7 @@ h2:after {
   float: left;
   padding: 1ex;
   border-radius: 25%;
-  filter: opacity(50%);
+  filter: $faded;
 }
 
 .username {
@@ -132,21 +141,23 @@ h2:after {
   margin-top: 0;
   padding-top: 10px;
   float: left;
-  filter: opacity(50%);
+  filter: $faded;
+
 }
 
 .handle {
   margin-top: 20px;
   float: right;
   padding-right: 5px;
-  filter: opacity(50%);
+  filter: $faded;
+
 }
 
 .text {
   margin-left: 1em;
   margin-right: 1em;
   padding-bottom: 15px;
-  color: #107879;
+  color: $text-color;
 }
 
 .footer {
@@ -158,10 +169,10 @@ h2:after {
   margin-top: 7px;
   padding-left: 1em;
   font-size: 75%;
-  color: #107879;
+  color: $text-color;
 }
 
-.icons {
+.icons{
   visibility: hidden;
   margin-top: 7px;
   float: right;
@@ -169,32 +180,30 @@ h2:after {
 }
 
 footer:before {
-  content: " ";
+  content: ' ';
   display: block;
   border: 0.5px solid #bfbebe;
 }
 
-.tweet:hover {
+.tweet:hover{
   border-color: black;
 }
 
 .tweet:hover .avatar {
-  filter: opacity(100%);
+  filter: $solid;
 }
 
 .tweet:hover .username {
-  filter: opacity(100%);
+  filter: $solid;
 }
 
 .tweet:hover .handle {
-  filter: opacity(100%);
+  filter: $solid;
 }
 
-.tweet:hover .icons {
+.tweet:hover .icons{
   visibility: visible;
   margin-top: 7px;
   float: right;
   padding-right: 1em;
 }
-
-/*# sourceMappingURL=layout.css.map */
