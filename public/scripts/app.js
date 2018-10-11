@@ -5,14 +5,36 @@
  */
 $(function() {
 
+  function daysSince(date) {
+    // The number of milliseconds in one day
+    var ONE_DAY = 1000 * 60 * 60 * 24;
+    var today = Date.now();
+
+    // Calculate the difference in milliseconds
+    var difference = today - date;
+
+    // Convert back to days and return
+    return Math.round(difference/ONE_DAY);
+  }
+
+  function dateFormat(created) {
+    let result;
+    if (created === 1) {
+      result = created + " day old";
+    } else {
+      result = created + " days old";
+    }
+    return result;
+  }
+
   function createTweetElement(tweetData) {
     //Save required data from tweetData
     const name = tweetData.user.name;
     const avatar = tweetData.user.avatars.small;
     const handle = tweetData.user.handle;
     const text = tweetData.content.text;
-    const created = new Date(tweetData.created_at);
-    const date = created.toString();
+    const created = daysSince(tweetData.created_at);
+    const date = dateFormat(created);
 
     //Create Tweet element using jQuery
     const $tweet = $("<article>").addClass("tweet");
