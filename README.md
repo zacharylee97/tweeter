@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone. New Tweets can be created by cli
 
 ## Final Product
 
-!["Screenshot of Tweeter page"](https://github.com/zacharylee97/tweeter/blob/master/docs/tweeter-page.png?raw=true)
+!["Screenshot of Tweeter page"](https://github.com/zacharylee97/tweeter/blob/master/docs/tweeter.png?raw=true)
 
 ## Dependencies
 
