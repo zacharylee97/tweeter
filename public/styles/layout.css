@@ -91,6 +91,7 @@ body {
 #tweets-container {
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-bottom: 2em;
 }
 #tweets-container .tweet {
   margin-left: 2em;

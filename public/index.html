@@ -30,6 +30,7 @@
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
       <button class="compose"><i class="fas fa-edit"></i> Compose</button>
+      <!-- Add click function to compose button -->
       <script>
           $(".compose").click(function(){
             $(".target").trigger("reset");
@@ -49,6 +50,7 @@
           <textarea name="text" class="textbox" placeholder="What are you humming about?"></textarea>
           <p class="error"></p>
           <input type="submit" value="Tweet">
+          <!-- Create new tweet when form is submitted -->
           <script>
             $(this).submit(function(event) {
               event.preventDefault();
@@ -61,11 +63,6 @@
       </section>
       <section id="tweets-container">
       </section>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
     </main>
   </body>
 </html>
