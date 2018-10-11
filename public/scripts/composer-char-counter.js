@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#text").on("keyup", function() {
+  $(".textbox").on("keyup", function() {
     let chars = $(this).val().length;
     let charLeft = 140 - chars;
     let counter = $(this).parent().children(".counter");

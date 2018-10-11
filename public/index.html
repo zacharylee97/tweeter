@@ -33,14 +33,14 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
-      <button id="compose"><i class="fas fa-edit"></i> Compose</button>
+      <button class="compose"><i class="fas fa-edit"></i> Compose</button>
       <script>
-          $("#compose").click(function(){
-          $("#target").trigger("reset");
+          $(".compose").click(function(){
+          $(".target").trigger("reset");
           $(".counter").text(140).css("color", "black");
           $(".error").css("display", "none");
           $(".new-tweet").slideToggle();
-          $("#text").focus();
+          $(".text").focus();
         });
       </script>
     </nav>
@@ -49,12 +49,12 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form id="target" method="POST" action="/tweets">
-          <textarea name="text" id="text" placeholder="What are you humming about?"></textarea>
+        <form class="target" method="POST" action="/tweets">
+          <textarea name="text" class="textbox" placeholder="What are you humming about?"></textarea>
           <p class="error"></p>
           <input type="submit" value="Tweet">
           <script>
-            $("#target").submit(function(event) {
+            $(this).submit(function(event) {
               event.preventDefault();
               newTweet();
               });

@@ -21,7 +21,7 @@
   line-height: 2.5;
 }
 
-#compose {
+.compose {
   float: right;
   padding: 1em;
   margin-top: 13px;
@@ -31,7 +31,7 @@
   filter: opacity(75%);
 }
 
-#compose:hover {
+.compose:hover {
   color: black;
   filter: opacity(100%);
 }

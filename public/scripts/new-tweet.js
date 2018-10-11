@@ -41,16 +41,16 @@ function renderTweet(tweet) {
 
 function newTweet() {
   //Validate tweet length
-  let text = ($("#text").val());
+  let text = ($(".textbox").val());
   if (text === "") {
     $(".error").text("Please enter your tweet!").slideDown();
   } else if (text.length > 140) {
     $(".error").text("Tweet is too long!").slideDown();
   } else {
     $(".error").slideUp();
-    let str = $("#target").serialize();
+    let str = $(".target").serialize();
     $.post("/tweets", str, function(data){
-      $("#target").trigger("reset");
+      $(".target").trigger("reset");
       $(".counter").text(140);
       $.get("/tweets", function(data){
         let tweet = renderTweet(data[data.length - 1]);
