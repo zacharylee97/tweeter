@@ -54,6 +54,7 @@ body {
   .compose:hover {
     color: black;
     filter: $solid;
+    cursor: pointer;
   }
 }
 
@@ -96,6 +97,11 @@ body {
     span {
       float: right;
     }
+
+    input {
+      cursor: pointer;
+    }
+
   }
   .error {
     display: none;
