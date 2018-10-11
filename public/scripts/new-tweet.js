@@ -1,16 +1,24 @@
- function daysSince(date) {
-    // The number of milliseconds in one day
-    var ONE_DAY = 1000 * 60 * 60 * 24;
+function daysSince(date) {
+  // The number of milliseconds in one day
+  var ONE_DAY = 1000 * 60 * 60 * 24;
 
-    // Convert both dates to milliseconds
-    var today = Date.now();
+  // Calculate the difference between date and today in milliseconds
+  var today = Date.now();
+  var difference = today - date;
 
-    // Calculate the difference in milliseconds
-    var difference = today - date;
+  // Convert back to days and return
+  return Math.round(difference/ONE_DAY);
+}
 
-    // Convert back to days and return
-    return Math.round(difference/ONE_DAY);
+function dateFormat(created) {
+  let result;
+  if (created === 1) {
+    result = created + " day old";
+  } else {
+    result = created + " days old";
   }
+  return result;
+}
 
 function createTweetElement(tweetData) {
   //Save required data from tweetData
@@ -19,7 +27,7 @@ function createTweetElement(tweetData) {
   const handle = tweetData.user.handle;
   const text = tweetData.content.text;
   const created = daysSince(tweetData.created_at);
-  const date = created + " days old";
+  const date = dateFormat(created);
 
   //Create Tweet element using jQuery
   const $tweet = $("<article>").addClass("tweet");
@@ -49,7 +57,7 @@ function createTweetElement(tweetData) {
 function renderTweet(tweet) {
   // calls createTweetElement for each tweet
   var $tweet = createTweetElement(tweet);
-  // takes return value and appends it to the tweets container
+  // takes return value and prepends it to the tweets container
   $('#tweets-container').prepend($tweet);
 }
 

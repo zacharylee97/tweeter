@@ -22,6 +22,7 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/new-tweet.js"></script>
 
+
   </head>
 
   <body>
@@ -33,12 +34,12 @@
       <button class="compose"><i class="fas fa-edit"></i> Compose</button>
       <script>
           $(".compose").click(function(){
-          $(".target").trigger("reset");
-          $(".counter").text(140).css("color", "black");
-          $(".error").css("display", "none");
-          $("#new-tweet").slideToggle();
-          $(".textbox").focus();
-        });
+            $(".target").trigger("reset");
+            $(".counter").text(140).css("color", "black");
+            $(".error").css("display", "none");
+            $("#new-tweet").slideToggle();
+            $(".textbox").focus();
+          });
       </script>
     </nav>
 

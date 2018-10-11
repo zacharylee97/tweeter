@@ -8,9 +8,9 @@ $(function() {
   function daysSince(date) {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
-    var today = Date.now();
 
-    // Calculate the difference in milliseconds
+    // Calculate the difference between date and today in milliseconds
+    var today = Date.now();
     var difference = today - date;
 
     // Convert back to days and return
@@ -66,7 +66,7 @@ $(function() {
     tweets.forEach(function(element){
       // calls createTweetElement for each tweet
       var $tweet = createTweetElement(element);
-      // takes return value and appends it to the tweets container
+      // takes return value and prepends it to the tweets container
       $('#tweets-container').prepend($tweet);
     });
   }
