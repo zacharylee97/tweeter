@@ -169,5 +169,12 @@ body {
   float: right;
   padding-right: 1em;
 }
+#tweets-container .tweet:hover .icons .like {
+  color: #00a087;
+  background-color: white;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=layout.css.map */

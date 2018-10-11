@@ -200,6 +200,14 @@ body {
       margin-top: 7px;
       float: right;
       padding-right: 1em;
+
+        .like {
+          color: $green;
+          background-color: white;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+      }
     }
   }
 }
