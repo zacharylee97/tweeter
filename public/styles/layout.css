@@ -12,14 +12,6 @@ body {
   font-family: "Roboto Condensed", serif;
 }
 
-.container {
-  margin: auto;
-  padding-top: 100px;
-  width: 450px;
-  background-color: white;
-}
-
-/*Header*/
 #nav-bar {
   position: fixed;
   z-index: 500;
@@ -28,22 +20,19 @@ body {
   background-color: #00a087;
   padding: 0 2em;
 }
-
-.logo {
+#nav-bar .logo {
   height: 80px;
   width: 80px;
   float: left;
 }
-
-.header {
+#nav-bar .header {
   color: white;
   float: left;
   padding-left: 10px;
   font-size: 200%;
   line-height: 2.5;
 }
-
-.compose {
+#nav-bar .compose {
   float: right;
   padding: 1em;
   margin-top: 13px;
@@ -52,14 +41,19 @@ body {
   color: #00a087;
   filter: opacity(75%);
 }
-
-.compose:hover {
+#nav-bar .compose:hover {
   color: black;
   filter: opacity(100%);
 }
 
-/*Compose Tweet*/
-.new-tweet {
+.container {
+  margin: auto;
+  padding-top: 100px;
+  width: 450px;
+  background-color: white;
+}
+
+#new-tweet {
   background-color: #eee;
   margin-left: 2em;
   margin-right: 2em;
@@ -68,65 +62,54 @@ body {
   padding: 1ex;
   display: none;
 }
-
-.new-tweet h2 {
+#new-tweet h2 {
   box-sizing: inherit;
   margin-top: 0;
 }
-
-h2:after {
+#new-tweet h2:after {
   content: " ";
   display: block;
   border: 0.5px solid black;
 }
-
-.new-tweet form {
+#new-tweet form {
   box-sizing: inherit;
   margin-top: 0;
 }
-
-.new-tweet form textarea {
+#new-tweet form textarea {
   width: 100%;
   padding-bottom: 1em;
 }
-
-.new-tweet form span {
+#new-tweet form span {
   float: right;
 }
-
-.error {
+#new-tweet .error {
   display: none;
   color: red;
   margin: 0px;
 }
 
-/*Tweets*/
 #tweets-container {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.tweet {
+#tweets-container .tweet {
   margin-left: 2em;
   margin-right: 2em;
   margin-bottom: 10px;
   border: 1px solid #afaeae;
   border-radius: 2%;
 }
-
-.tweetHeader {
+#tweets-container .tweetHeader {
   background-color: #eee;
   padding-bottom: 70px;
 }
-
-.avatar {
+#tweets-container .avatar {
   float: left;
   padding: 1ex;
   border-radius: 25%;
   filter: opacity(50%);
 }
-
-.username {
+#tweets-container .username {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 0;
@@ -134,63 +117,52 @@ h2:after {
   float: left;
   filter: opacity(50%);
 }
-
-.handle {
+#tweets-container .handle {
   margin-top: 20px;
   float: right;
   padding-right: 5px;
   filter: opacity(50%);
 }
-
-.text {
+#tweets-container .text {
   margin-left: 1em;
   margin-right: 1em;
   padding-bottom: 15px;
   color: #107879;
 }
-
-.footer {
+#tweets-container .footer {
   margin-bottom: 30px;
 }
-
-.date {
+#tweets-container .date {
   float: left;
   margin-top: 7px;
   padding-left: 1em;
   font-size: 75%;
   color: #107879;
 }
-
-.icons {
+#tweets-container .icons {
   visibility: hidden;
   margin-top: 7px;
   float: right;
   padding-right: 1em;
 }
-
-footer:before {
+#tweets-container footer:before {
   content: " ";
   display: block;
-  border: 0.5px solid #bfbebe;
+  border: 1px solid #afaeae;
 }
-
-.tweet:hover {
+#tweets-container .tweet:hover {
   border-color: black;
 }
-
-.tweet:hover .avatar {
+#tweets-container .tweet:hover .avatar {
   filter: opacity(100%);
 }
-
-.tweet:hover .username {
+#tweets-container .tweet:hover .username {
   filter: opacity(100%);
 }
-
-.tweet:hover .handle {
+#tweets-container .tweet:hover .handle {
   filter: opacity(100%);
 }
-
-.tweet:hover .icons {
+#tweets-container .tweet:hover .icons {
   visibility: visible;
   margin-top: 7px;
   float: right;
