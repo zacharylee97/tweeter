@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+let counter = 0;
+
 function createTweetElement(tweetData) {
   //Save required data from tweetData
   const name = tweetData.user.name;
@@ -14,7 +16,9 @@ function createTweetElement(tweetData) {
   const date = dateFormat(created);
 
   //Create Tweet element using jQuery
-  const $tweet = $("<article>").addClass("tweet");
+  const $tweet = $("<article>").addClass("tweet").data("tweet-id", counter);
+  counter++;
+
 
   const $tweetHeader = $("<header>").addClass("tweetHeader");
   const $avatar = $("<img>").addClass("avatar").attr("src", avatar);
@@ -30,7 +34,20 @@ function createTweetElement(tweetData) {
   const $flag = $("<i>").addClass("fas fa-flag");
   const $retweet = $("<i>").addClass("fas fa-retweet");
   const $heart = $("<i>").addClass("fas fa-heart");
-  $icons.append($flag, $retweet, $heart);
+
+  //Add click function to like button
+  const $like = $("<button>").addClass("heart").append($heart);
+
+  const $script = $("<script>").append(
+    `
+      $(".heart").click(function() {
+        let id = $(this).data("tweet-id");
+        console.log(id);
+      })
+    `
+    );
+
+  $icons.append($flag, $retweet, $like, $script);
   $footer.append($date, $icons);
 
   $tweet.append($tweetHeader, $text, $footer);

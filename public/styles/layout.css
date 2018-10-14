@@ -44,6 +44,7 @@ body {
 #nav-bar .compose:hover {
   color: black;
   filter: opacity(100%);
+  cursor: pointer;
 }
 
 .container {
@@ -81,6 +82,9 @@ body {
 }
 #new-tweet form span {
   float: right;
+}
+#new-tweet form input {
+  cursor: pointer;
 }
 #new-tweet .error {
   display: none;
@@ -169,7 +173,7 @@ body {
   float: right;
   padding-right: 1em;
 }
-#tweets-container .tweet:hover .icons .like {
+#tweets-container .tweet:hover .icons .heart {
   color: #00a087;
   background-color: white;
   border: none;

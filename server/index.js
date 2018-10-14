@@ -24,6 +24,11 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
   app.use("/tweets", tweetsRoutes);
 
+  //Endpoint to handle liking requests
+  app.post("/like", function(req, res) {
+    console.log(req.params.id);
+  });
+
 });
 
 app.listen(PORT, () => {

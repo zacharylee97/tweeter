@@ -54,6 +54,7 @@ body {
   .compose:hover {
     color: black;
     filter: $solid;
+    cursor: pointer;
   }
 }
 
@@ -96,6 +97,11 @@ body {
     span {
       float: right;
     }
+
+    input {
+      cursor: pointer;
+    }
+
   }
   .error {
     display: none;
@@ -155,6 +161,7 @@ body {
     color: $text-color;
   }
 
+
   .footer {
     margin-bottom: 30px;
   }
@@ -201,7 +208,7 @@ body {
       float: right;
       padding-right: 1em;
 
-        .like {
+        .heart {
           color: $green;
           background-color: white;
           border: none;
