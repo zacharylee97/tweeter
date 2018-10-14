@@ -45,7 +45,7 @@ function renderTweets(tweets) {
     //Calls createTweetElement for each tweet
     var $tweet = createTweetElement(element);
     //Takes return value and prepends it to the tweets container
-    $('#tweets-container').prepend($tweet);
+    $("#tweets-container").prepend($tweet);
   });
 }
 
@@ -81,7 +81,7 @@ function renderNewTweet(tweet) {
   //Calls createTweetElement for new tweet
   var $tweet = createTweetElement(tweet);
   //Takes return value and prepends it to the tweets container
-  $('#tweets-container').prepend($tweet);
+  $("#tweets-container").prepend($tweet);
 }
 
 function newTweet() {
